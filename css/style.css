@@ -550,3 +550,41 @@ header {
   margin: 0 auto; /* Centering */
   border: none;
 }
+
+body.dark-mode {
+  --clr-light: #1a1a1a; 
+  --clr-dark: #f4f4f4;  
+  --clr-accent: #20ffda; 
+}
+
+#dark-mode-toggle {
+  background: transparent;
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-accent);
+  padding: 0.3em 0.8em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: var(--ff-secondary);
+  font-size: 0.8rem;
+  margin-right: 1em;
+  transition: all 200ms ease;
+  margin-left: auto;
+}
+
+#dark-mode-toggle:hover {
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+}
+
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
