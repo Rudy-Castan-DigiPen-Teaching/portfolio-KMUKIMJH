@@ -1,37 +1,23 @@
-<!-- https://youtu.be/_xkSvufmjEs?si=mh-MXT2ZdUasYAYn&t=3416 -->
-<!-- adobe.ly/2GAgF93 -->
-<!-- https://scrimba.com/build-and-deploy-your-portfolio-c012 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="../img/face.jpg">
-
-    <!-- Help auto scale for desktop & mobile -->
+    <link rel="icon" type="image/svg+xml" href="img/face.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STUDENT TODO Website</title>
-
-    <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
+    <title>JUNHWAN KIM Website</title>
     <link rel="stylesheet" href="external/normalize.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-
-    <!-- https://fonts.google.com/selection/embed -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet" />
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
     <header>
         <div class="logo">
-            <!-- alt text can be blank since the logo is purely decorative and putting something like logo isn't actually helpful -->
             <img src="img/cout.jpg" alt="">
         </div>
         <button class="nav-toggle" aria-label="toggle navigation">
@@ -48,78 +34,59 @@
         </nav>
     </header>
 
-    <!-- Introduction -->
-
-    <section class="intro" id="#home">
-        <!-- TODO put in a mouse based interactive shader visualization page-->
-        <!-- <div class="intro-bg">
-            <iframe src="webgl/for_fun.html"></iframe>
-        </div> -->
+    <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
-            Hi, I am <strong>TODO TODO</strong>
+            Hi, I am <strong>Junhwan Kim</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">Game Programmer/Designer/Developer/Player/TODO/TODO</p>
-        <img src="img/face.jpg" alt="a picture of TODO TODO smiling" class="intro__img" />
+        <p class="section__subtitle section__subtitle--intro">Game Designer/Player</p>
+        <img src="img/face.jpg" alt="A picture of Junhwan Kim smiling" class="intro__img" />
     </section>
 
-    <!-- My Services -->
     <section class="my-services" id="skills">
-        <h2 class="section__title section__title--services">SKLILZ</h2>
+        <h2 class="section__title section__title--services">What I Am Learning</h2>
         <div class="services">
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>C++ & Concurrency</h3>
+                <p> Currently exploring advanced features of modern C++, focusing on memory management, move semantics, and the Rule of 5/0.
+                    Actively studying concurrent programming by implementing thread management and researching thread-safe data sharing mechanisms in multithreaded environments.
                 </p>
             </div>
-
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>Graphics & Rendering</h3>
+                <p> Studying rendering pipelines and computer graphics mathematics, including view/projection matrices, geometric transformations, and visibility testing.
+                    Applying these mathematical concepts using OpenGL to build and optimize custom batch and instanced renderers for efficient 2D/3D scene rendering.
                 </p>
             </div>
-
             <div class="service">
-                <h3>SKILL TODO</h3>
-                <p> TODO
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
+                <h3>Game Engine Architecture</h3>
+                <p> Learning the core principles of low-level game engine architecture.
+                    Focusing on porting engine components, developing robust collision routing systems, and designing Finite State Machines (FSM) to handle complex entity behaviors and scalable game logic.
                 </p>
             </div>
         </div>
-
         <a href="#projects" class="btn">Projects</a>
     </section>
 
-    <!-- About Me -->
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">Who I am</h2>
         <p class="section__subtitle section__subtitle--about">
-            Student Game Programmer TODO TODO
+            Aspiring Game Designer & C++ Programmer
         </p>
-
         <div class="about-me__body">
             <p>
-                TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                I am a Computer Science student based in Pyeongtaek and studying in Daegu, South Korea.
+                I am actively learning programming to build a strong technical foundation for my ultimate goal of becoming a Game Designer.
+                By taking on various roles across my projects—including production and engine development—I am broadening my comprehensive understanding of the entire game development pipeline.
             </p>
             <p>
-                TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
+                I continuously strive to develop a keen eye for the overall flow and architecture of code.
+                Through hands-on project experience, I am encountering the practical challenges of game development firsthand.
+                These experiences teach me invaluable lessons about technical constraints, team dynamics, and the crucial factors I must consider when designing games in the future.
             </p>
         </div>
-        <img src="img/tall.jpg" alt="picture of TODO TODO" class="about-me__img" />
+        <img src="img/tall.jpg" alt="A picture of Junhwan Kim" class="about-me__img" />
     </section>
 
-    <!-- My Portfolio -->
     <section class="my-projects" id="projects">
         <h2 class="section__title section__title--projects">My Projects</h2>
         <p class="section__subtitle section__subtitle--projects">
@@ -147,96 +114,92 @@
             <a href="portfolio/07_gradient.html" class="portfolio__item">
                 <img src="img/portfolio_thumbnails/07_gradient.jpg" alt="" class="portfolio__img" />
             </a>
-
         </div>
     </section>
 
-    <!-- Resume Section -->
     <section class="my-resume" id="resume">
         <h2 class="section__title section__title--resume">Resume</h2>
         <a target="_blank" href="docs/Resume.pdf"><i class="far fa-file-pdf"></i> PDF</a>
-
         <div class="resume-section">
             <h3>Experience</h3>
             <div class="resume-item">
                 <p>
-                    <b>Title, Company</b></br>
-                    Month Year - Present</br>
-                    <em>City, State, Country</em></br>
-                    What you did, how you did it, result. Quantify your achievement(s) try to have at least one like
-                    this. Look at the example below.
+                    <b>Engine Developer, Team Project</b></br>
+                    Oct 2025 - Present</br>
+                    <em>Daegu, Korea</em></br>
+                    Managed general engine porting processes and engineered a custom rendering system utilizing OpenGL.
+                    Implemented batch and instanced renderers optimized for visually cohesive scenes with high sprite counts, improving overall rendering performance.
                 </p>
             </div>
             <div class="resume-item">
                 <p>
-                    <b>Software Test Engineer Intern, Qualtrics</b></br>
-                    Month Year - Month Year </br>
-                    <em>Seattle, WA</em></br>
-                    Implemented an extensible script in Python to automate project creation with static data on tests to
-                    improve pass rates and duration, ultimately speeding up software releases. Improved test times
-                    across 3 teams by nearly 400% with more stability. Reviewed design docs and prototypes of an
-                    upcoming feature release to create nearly 50 test cases. Performed manual testing and triaged 15
-                    bugs with engineers.
+                    <b>Producer, MagnetDude</b></br>
+                    Mar 2025 - Jun 2025</br>
+                    <em>Daegu, Korea</em></br>
+                    Led the project by managing schedules to synchronize code, art, and sound development.
+                    Handled overall timeline management, synthesized team opinions, and reported on progress.
+                    Gained valuable leadership experience by resolving conflicts with non-participating members through active communication and gathering team consensus.
                 </p>
             </div>
+            
             <h3>Projects</h3>
             <div class="resume-item">
                 <p>
-                    <b>Role, Name of Project</b></br>
-                    Month Year - Month Year</br>
-                    <em>Redmond, WA</em></br>
-                    Type of game, (2D Platformer, FPS) and describe its genre (Horror, Adventure, etc.).
-                    Collaborated with a team of x and developed a ...
-                    Designed most of the front end & debugged PHP.
-                    Awarded the Most Creative Award by Appian and Best Innovation in Collaboration Award by Red
-                    Ventures.
+                    <b>Game Programmer, CS230 2D Action Game(ProtoType)</b></br>
+                    Oct 2025 - Dec 2025</br>
+                    <em>Daegu, Korea</em></br>
+                    2D Action Platformer. Collaborated with a teammate to develop and implement robust Finite State Machines (FSM) for enemy AI behaviors (patrol, melee, ranged).
+                    Orchestrated scene management, player updates, collision routing, and designed randomized map progression mechanics across 3 distinct map phases.
                 </p>
             </div>
-
+            <div class="resume-item">
+                <p>
+                    <b>Presenter & Developer, Explore C++ Concurrency</b></br>
+                    Nov 2025 - Nov 2025</br>
+                    <em>Daegu, Korea</em></br>
+                    Designed a functional demo program based on modern C++ Concurrency topics.
+                    Showcased thread management and data sharing mechanisms to ensure concurrent safety, presenting the underlying architecture and solutions to peers.
+                </p>
+            </div>
+            
             <h3>Leadership Experience</h3>
             <div class="resume-item">
                 <p>
-                    <b>Role, DigiPen Institute of Technology</b></br>
-                    Month Year - Month Year</br>
-                    <em>Redmond, WA</em></br>
-                    A lot of you do many things on campus.
-                    For example, did you manage/host a game jam?
-                    Brainstorm initiatives you have worked on.
+                    <b>Study Facilitator, CS Study Group</b></br>
+                    Mar 2026 - May 2026</br>
+                    <em>Daegu, Korea</em></br>
+                    Facilitated study sessions focused on computer graphics mathematics and mechanics.
+                    Synthesized complex mathematical concepts, including 3D rendering pipelines and geometric transformations, into comprehensive study materials and cheat sheets to support peer learning.
                 </p>
             </div>
-
+            
             <h3>Education</h3>
             <div class="resume-item">
                 <p>
-                    <b>Bachelor of Science in Computer Science in Real-Time Interactive Simulation</b></br>
-                    Year-Year</br>
-                    <em>Daegu, Korea & Redmond, WA, USA</em></br>
-                    Relevant Courses: Name the courses that would draw attention, significant, relevant to the job.
+                    <b>Bachelor of Science in Computer Science</b></br>
+                    2023 - Expected 2027</br>
+                    <em>Daegu, Korea</em></br>
+                    Relevant Courses: Real-Time Interactive Simulation, Computer Graphics Mathematics, Advanced C++, Data Structures (CS200, CS225, CS230, CS250).
                 </p>
             </div>
         </div>
     </section>
-    <!-- /Resume Section -->
-
-    <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:coolman20030715@gmail.com" class="footer__link">junhwan.kim@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://linkedin.com/in/준환-김-273240406/">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/KMUKIMJH">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
-            <!-- Want to list more? search : https://fontawesome.com/v5/search?ic=brands -->
-        </ul>
+            </ul>
     </footer>
 
     <script src="js/index.js"></script>
 </body>
-
 </html>
