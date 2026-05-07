@@ -129,6 +129,7 @@ h3 {
 .section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
+  color: #303030;
   padding: 0.25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
@@ -553,8 +554,14 @@ header {
 
 body.dark-mode {
   --clr-light: #1a1a1a; 
-  --clr-dark: #f4f4f4;  
-  --clr-accent: #20ffda; 
+  --clr-dark: #f4f4f4; 
+  --clr-accent: #0fa185; 
+}
+
+body.dark-mode .my-services,
+body.dark-mode .my-projects {
+  background-color: #0d0d0d;
+  color: var(--clr-dark);
 }
 
 #dark-mode-toggle {
@@ -566,25 +573,15 @@ body.dark-mode {
   border-radius: 5px;
   font-family: var(--ff-secondary);
   font-size: 0.8rem;
-  margin-right: 1em;
   transition: all 200ms ease;
   margin-left: auto;
+  margin-right: 4.5em;
+  align-self: center;
+  position: relative;
+  z-index: 10;
 }
 
 #dark-mode-toggle:hover {
   background: var(--clr-accent);
-  color: var(--clr-dark);
-}
-
-
-.reveal {
-  position: relative;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.8s ease-out;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
+  color: #ffffff;
 }
