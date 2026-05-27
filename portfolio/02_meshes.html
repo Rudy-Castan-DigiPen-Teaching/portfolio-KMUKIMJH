@@ -11,7 +11,7 @@
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>STUDENT TODO Website</title>
+    <title>Junhwan Kim Website</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -61,7 +61,6 @@
 
     <!-- Introduction -->
     <section class="intro">
-        <!-- TODO put the name of the assignment here -->
         <h1 class="section__title section__title--intro">
             Project <strong>Procedural Geometric Modeling</strong>
         </h1>
@@ -71,17 +70,22 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>The Procedural Meshes project was a part of my CS250 Computer Graphics course at DigiPen.
+            The goal of this assignment was to mathematically generate and render various 3D primitive meshes dynamically at runtime for both Windows and Web platforms.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Implemented procedural generation algorithms using parametric equations for a <code>Plane</code>, <code>Cube</code>, <code>Sphere</code>, <code>Torus</code>, <code>Cylinder</code>, <code>Cone</code>, and a <code>custom Trefoil Knot</code>.</li>
+            <li>Constructed index buffers and managed mesh topologies to support both solid triangle rendering and wireframe line rendering.</li>
+            <li>Integrated the generated geometries into the application using a factory pattern and connected them to an ImGui interface for real-time resolution control.</li>
+            <li>Resolved strict cross-platform compilation errors for WebGL (Emscripten) by enforcing rigorous C++ type safety and preventing implicit conversions.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>During development, I encountered a critical issue where the WebGL build would fail due to Emscripten's strict compiler warnings regarding implicit type conversions and floating-point promotions.
+            By meticulously refactoring the codebase to enforce strict type safety, I was able to achieve a flawless cross-platform build.
+            Additionally, integrating the bonus Trefoil Knot required careful spatial transformations to correctly align its scale and position with the other primitives.
+            This project significantly enhanced my understanding of 3D parametric equations, mesh topology, and writing robust, cross-platform C++ code.</p>
     </div>
 
     <div class="portfolio-item-individual">
@@ -91,15 +95,15 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:junhwan.kim@digipen.edu" class="footer__link">junhwan.kim@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://linkedin.com/in/준환-김-273240406/">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/KMUKIMJH">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
