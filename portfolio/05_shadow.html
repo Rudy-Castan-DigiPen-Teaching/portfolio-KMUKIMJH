@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Junhwan Kim Website</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -69,17 +69,40 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project focuses on the implementation of a multi-pass shadow mapping technique in an OpenGL-based 3D graphics engine.
+            The primary objective was to dynamically generate and render realistic shadows cast by a perspective light source.
+            By utilizing custom Framebuffers to capture depth information from the light's point of view, the system evaluates fragment occlusion in the main rendering pass.
+            Furthermore, the project enhances the overall scene's visual immersion by integrating an exponential squared fog system and applying proper gamma correction to the final lighting calculations.</p>
 
         <h2>Tasks Completed</h2>
-        <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
-        </ul>
+    <ul>
+        <li>
+            <strong>Texture and Framebuffer Architecture:</strong><br>
+            Expanded the <code>Texture</code> class to support generating distinct Depth maps (<code>LoadAsDepthTexture</code>) using hardware-friendly comparison modes (<code>GL_COMPARE_REF_TO_TEXTURE</code>) and RGBA color targets. Fully implemented the <code>FrameBuffer</code> class lifecycle to manage texture attachments safely using proper <code>GL::</code> wrappers (e.g., <code>GL::GenFramebuffers</code>, <code>GL::FramebufferTexture2D</code>).
+        </li>
+        <li>
+            <strong>Camera Matrix Computations:</strong><br>
+            Implemented the <code>ViewMatrix()</code> and <code>ToWorldMatrix()</code> operations in the <code>Camera</code> class to accurately translate and rotate basis vectors into robust view and world transformations.
+        </li>
+        <li>
+            <strong>Multi-pass Rendering Pipeline:</strong>
+            <ul>
+                <li><strong>Pass 1 (Depth Record):</strong> Implemented <code>renderToDepthBuffer()</code>, temporarily rebinding the framebuffer and applying <code>GL_POLYGON_OFFSET_FILL</code> to render the scene's depths from the light's perspective while mitigating shadow acne.</li>
+                <li><strong>Pass 2 (Screen Render):</strong> Implemented <code>renderToScreen()</code>, binding the generated depth texture to the shadow shader for testing scene occlusion based on depth proximity.</li>
+                <li><strong>Debugging Visuals:</strong> Programmed <code>drawLightFrustum()</code> and <code>drawDepthTexture()</code> utilizing inverse matrices and NDC quads to project the light's field-of-view bounding box and inspect the captured depth map directly in real-time.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Advanced GLSL Shaders:</strong><br>
+            Constructed custom projection vectors mapping world space seamlessly into shadow space (<code>vPositionInShadowSpace</code>) within the vertex shader. Utilized <code>textureProj()</code> for shadow-map lookups in the fragment shader, capping bounds computationally to prevent false shadow casting behind the light source. Overlaid a distance-based Exponential Squared Fog and concluded with standard Gamma Correction (<code>pow(color, 1/2.2)</code>).
+        </li>
+    </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>Implementing shadow mapping provided profound insights into the inner workings of multi-pass rendering and specific graphics pipeline constraints.
+            One of the primary complexities was resolving "shadow acne" and geometric overlapping artifacts; managing the nuances of <code>glPolygonOffset</code> variables significantly improved the resulting visual purity.</p>
+        <p>Additionally, tracking down compiler integration bugs—such as C++ enum implicit conversion warnings inside Emscripten WebGL builds and abstracting legacy raw OpenGL pointers properly under localized wrapper functions—reinforced strict software architectural habits.
+            Effectively mapping perspective matrices step-by-step from <em>Clip Space &rarr; Light View Space &rarr; World Space</em> during the light frustum debug rendering fundamentally bridged the gap between theoretical linear algebra and practical 3D visualizations.</p>
     </div>
 
     <div class="portfolio-item-individual">
